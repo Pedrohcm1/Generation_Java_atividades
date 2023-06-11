@@ -1,6 +1,6 @@
 package conta.model;
 
-public class ContaCorrente extends Conta{
+public class ContaCorrente extends Conta {
 
 	private float limite;
 
@@ -8,7 +8,7 @@ public class ContaCorrente extends Conta{
 		super(numero, agencia, tipo, titular, saldo);
 		this.limite = limite;
 	}
-	
+
 	public float getLimite() {
 		return limite;
 	}
@@ -18,22 +18,19 @@ public class ContaCorrente extends Conta{
 	}
 
 	@Override
-	public boolean sacar(float valor) { 
-		
-		if(this.getSaldo() + this.getLimite() < valor) {
+	public boolean sacar(float valor) {
+		if (this.getSaldo() + this.getLimite() < valor) {
 			System.out.println("\n Saldo Insuficiente!");
 			return false;
 		}
-		
 		this.setSaldo(this.getSaldo() - valor);
 		return true;
-		
 	}
-	
-    @Override
+
+	@Override
 	public void visualizar() {
 		super.visualizar();
-		System.out.println("Limite de Crédito: " + this.limite);
+		System.out.println("Limite Crédito: " + this.limite);
 	}
-    
+
 }
