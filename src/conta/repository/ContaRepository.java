@@ -1,7 +1,7 @@
 package conta.repository;
 
 import conta.model.Conta;
-import conta.util.Cores;
+
 
 public interface ContaRepository {
 	
@@ -17,4 +17,4 @@ public interface ContaRepository {
 	public void depositar(int numero, float valor);
 	public void transferir(int numeroOrigem,int numeroDestino, float valor);
 	
-}Cores.TEXT_YELLOW + Cores.ANSI_BLACK_BACKGROUND
+}
